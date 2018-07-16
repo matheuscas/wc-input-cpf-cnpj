@@ -1,43 +1,32 @@
 import { TestWindow } from '@stencil/core/testing';
-import { MyComponent } from './my-component';
+import { InputCpfCnpj } from './my-component';
 
-describe('my-component', () => {
+describe('input-cpf-cnpj', () => {
   it('should build', () => {
-    expect(new MyComponent()).toBeTruthy();
+    expect(new InputCpfCnpj()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element: HTMLMyComponentElement;
+    let element: HTMLInputCpfCnpjElement;
     let testWindow: TestWindow;
     beforeEach(async () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
-        components: [MyComponent],
-        html: '<my-component></my-component>'
+        components: [InputCpfCnpj],
+        html: '<input-cpf-cnpj></input-cpf-cnpj>'
       });
     });
 
-    it('should work without parameters', () => {
-      expect(element.textContent.trim()).toEqual('Hello, World! I\'m');
+    it('should work without placeholder', async () => {
+      await testWindow.flush();
+      expect(element.placeholder).toBeUndefined();
     });
 
-    it('should work with a first name', async () => {
-      element.first = 'Peter';
+    it('should work with placeholder', async () => {
+      const placeholder = "02441251554";
+      element.placeholder = placeholder;
       await testWindow.flush();
-      expect(element.textContent.trim()).toEqual('Hello, World! I\'m Peter');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await testWindow.flush();
-      expect(element.textContent.trim()).toEqual('Hello, World! I\'m  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter';
-      element.last = 'Parker';
-      await testWindow.flush();
-      expect(element.textContent.trim()).toEqual('Hello, World! I\'m Peter Parker');
+      expect(element.placeholder).toEqual(placeholder);
     });
   });
 });

@@ -29,33 +29,32 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyComponent {
-      'first': string;
-      'last': string;
+    interface InputCpfCnpj {
+      'placeholder': string;
     }
   }
 
-  interface HTMLMyComponentElement extends StencilComponents.MyComponent, HTMLStencilElement {}
+  interface HTMLInputCpfCnpjElement extends StencilComponents.InputCpfCnpj, HTMLStencilElement {}
 
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLInputCpfCnpjElement: {
+    prototype: HTMLInputCpfCnpjElement;
+    new (): HTMLInputCpfCnpjElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'input-cpf-cnpj': HTMLInputCpfCnpjElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'input-cpf-cnpj': HTMLInputCpfCnpjElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'input-cpf-cnpj': JSXElements.InputCpfCnpjAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface InputCpfCnpjAttributes extends HTMLAttributes {
+      'onIsValid'?: (event: CustomEvent) => void;
+      'placeholder'?: string;
     }
   }
 }
