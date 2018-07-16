@@ -53,7 +53,9 @@ declare global {
   }
   namespace JSXElements {
     export interface InputCpfCnpjAttributes extends HTMLAttributes {
-      'onIsValid'?: (event: CustomEvent) => void;
+      'onChanged'?: (event: CustomEvent) => void;
+      'onInput'?: (event: CustomEvent) => void;
+      'onValid'?: (event: CustomEvent) => void;
       'placeholder'?: string;
     }
   }
