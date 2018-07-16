@@ -1,35 +1,20 @@
-import { Component, Prop, EventEmitter, Event, State} from '@stencil/core';
-import { CPF_LENGTH, isCPFValid, isCNPJValid } from './validation';
+import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'input-cpf-cnpj',
+  tag: 'my-component',
   styleUrl: 'my-component.css',
   shadow: true
-})
-export class InputCpfCnpj {
+  shadow: false
+export class MyComponent {
 
-  @Prop() placeholder?: string;
-  @Event() isValid: EventEmitter;
-  @State() valid: boolean = false;
-
-  inputChanged(event) {
-    const value: string = event.target.value.trim();
-    let result;
-    if (value.length <= CPF_LENGTH){
-      result = isCPFValid(value);
-    }else{
-      result = isCNPJValid(value);
-    }
-    console.log('input changed: ', value, result);
-    this.isValid.emit(result);
-    this.valid = result;
-  }
+  @Prop() first: string;
+  @Prop() last: string;
 
   render() {
     return (
-      <input type="text" placeholder={this.placeholder} onKeyUp={(event: UIEvent) => this.inputChanged(event)}/>
+      <div>
+        Hello, World! I'm {this.first} {this.last}
+      </div>
     );
   }
-
-
 }
