@@ -9,6 +9,13 @@ import { CPF_LENGTH, isCPFValid, isCNPJValid } from './validation';
 export class InputCpfCnpj {
 
   @Prop() placeholder?: string;
+  @Prop() value?: string;
+  @Prop() autocomplete?: string;
+  @Prop() maxlength?: string;
+  @Prop() minlength?: string;
+  @Prop() pattern?: string;
+  @Prop() size?: number;
+  @Prop() required?: boolean;
 
   @Event() valid: EventEmitter;
   @Event() changed: EventEmitter;
@@ -30,7 +37,15 @@ export class InputCpfCnpj {
 
   render() {
     return (
-      <input type="text" placeholder={this.placeholder}
+      <input type="text"
+        value={this.value}
+        autocomplete={this.autocomplete}
+        maxlength={this.maxlength}
+        minlength={this.minlength}
+        pattern={this.pattern}
+        placeholder={this.placeholder}
+        size={this.size}
+        required={this.required}
         onKeyUp={(event: UIEvent) => this.inputChanged(event)}
         onChange={event => this.changed.emit(event)}
         onInput={event => this.input.emit(event)} />
