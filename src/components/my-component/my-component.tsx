@@ -16,6 +16,7 @@ export class InputCpfCnpj {
   @Prop() pattern?: string;
   @Prop() size?: number;
   @Prop() required?: boolean;
+  @Prop() classes?: string;
 
   @Event() valid: EventEmitter;
   @Event() changed: EventEmitter;
@@ -46,6 +47,7 @@ export class InputCpfCnpj {
         placeholder={this.placeholder}
         size={this.size}
         required={this.required}
+        class={this.classes}
         onKeyUp={(event: UIEvent) => this.inputChanged(event)}
         onChange={event => this.changed.emit(event)}
         onInput={event => this.input.emit(event)} />

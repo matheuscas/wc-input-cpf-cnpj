@@ -31,6 +31,7 @@ declare global {
   namespace StencilComponents {
     interface InputCpfCnpj {
       'autocomplete': string;
+      'classes': string;
       'maxlength': string;
       'minlength': string;
       'pattern': string;
@@ -61,6 +62,7 @@ declare global {
   namespace JSXElements {
     export interface InputCpfCnpjAttributes extends HTMLAttributes {
       'autocomplete'?: string;
+      'classes'?: string;
       'maxlength'?: string;
       'minlength'?: string;
       'onChanged'?: (event: CustomEvent) => void;
