@@ -1,7 +1,7 @@
 {
   "name": "input-cpf-cnpj",
   "version": "0.0.1",
-  "description": "<input/> with embbed CPF and CNPJ validation",
+  "description": "<input/> with embed CPF and CNPJ validation",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
