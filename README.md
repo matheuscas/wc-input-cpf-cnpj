@@ -27,6 +27,18 @@ It has no dependencies, except it's own compilier.
 
 All other events are from the native input with text type, such as `change` and `input`. You can check [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text) the events and attributes supported by this component. The only exception, it's the `list` attribute from `<input>`, cuz it makes no sense that kind of attribute in a field that does a single text validation. 
 
+## Using this component
+
+### Script tag
+
+- Put a script tag similar to this `<script src='https://unpkg.com/input-cpf-cnpj@0.0.2/dist/input-cpf-cnpj.js'></script>` in the head of your index.html
+- Then you can use the element anywhere in your template, JSX, html etc
+
+### Node Modules
+- Run `npm install input-cpf-cnpj --save`
+- Put a script tag similar to this `<script src='node_modules/input-cpf-cnpj/dist/input-cpf-cnpj.js'></script>` in the head of your index.html
+- Then you can use the element anywhere in your template, JSX, html etc
+
 ## Em pt-br:
 
 Um "[web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components)" simples que encapsulta o `<input/>` e valida se seu conteúdo é um número válido de CPF ou CNPJ
