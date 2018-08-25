@@ -1,5 +1,5 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'input-cpf-cnpj',
   outputTargets:[
     {
       type: 'dist'
