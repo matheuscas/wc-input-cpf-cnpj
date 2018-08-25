@@ -27,6 +27,12 @@ It has no dependencies, except it's own compilier.
 
 All other events are from the native input with text type, such as `change` and `input`. You can check [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text) the events and attributes supported by this component. The only exception, it's the `list` attribute from `<input>`, cuz it makes no sense that kind of attribute in a field that does a single text validation. 
 
+To style this component using your own classes or from a CSS framework, use `classes` prop. Something like bellow, using `input` class from [Bulma](https://bulma.io/documentation/form/input/):
+
+```html
+<input-cpf-cnpj classes="input"></input-cpf-cnpj>
+```
+
 ## Using this component
 
 ### Script tag
