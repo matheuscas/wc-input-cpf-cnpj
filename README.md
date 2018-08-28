@@ -37,7 +37,7 @@ To style this component using your own classes or from a CSS framework, use `cla
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/input-cpf-cnpj@0.0.2/dist/input-cpf-cnpj.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/input-cpf-cnpj@0.0.3/dist/input-cpf-cnpj.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
