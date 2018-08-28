@@ -22,8 +22,6 @@ export class InputCpfCnpj {
   @Event() changed: EventEmitter;
   @Event() input: EventEmitter;
 
-  @State() isValid: boolean = false;
-
   inputChanged(event) {
     const value: string = event.target.value.trim();
     let result;
